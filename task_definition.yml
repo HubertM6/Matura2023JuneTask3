@@ -1,0 +1,42 @@
+environment:
+  image: python:3.8-alpine
+
+sourceFile: src/task.py
+
+tasks:
+  task_1:
+    checkTypes:
+      FAST:
+        verification: python -m unittest test.test_task_1_fast
+      FULL:
+        verification: python -m unittest test.test_task_1_full
+    results:
+      - test_results/task_1/test_summary.txt
+      - test_results/task_1/test_details.txt
+  task_2:
+    checkTypes:
+      FAST:
+        verification: python -m unittest test.test_task_2_fast
+      FULL:
+        verification: python -m unittest test.test_task_2_full
+    results:
+      - test_results/task_2/test_summary.txt
+      - test_results/task_2/test_details.txt
+  task_3:
+    checkTypes:
+      FAST:
+        verification: python -m unittest test.test_task_3_fast
+      FULL:
+        verification: python -m unittest test.test_task_3_full
+    results:
+      - test_results/task_3/test_summary.txt
+      - test_results/task_3/test_details.txt
+  task_4:
+    checkTypes:
+      FAST:
+        verification: python -m unittest test.test_task_4_fast
+      FULL:
+        verification: python -m unittest test.test_task_4_full
+    results:
+      - test_results/task_4/test_summary.txt
+      - test_results/task_4/test_details.txt
